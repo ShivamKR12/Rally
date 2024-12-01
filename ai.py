@@ -1,5 +1,8 @@
 from ursina import *
 from particles import Particles
+import logging
+
+logger = logging.getLogger(__name__)
 
 sign = lambda x: -1 if x < 0 else (1 if x > 0 else 0)
 
