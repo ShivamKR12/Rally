@@ -1,5 +1,5 @@
 from ursina import *
-from direct.stdpy import thread
+from direct.stdpy import threading
 
 from car import Car
 from ai import AICar
