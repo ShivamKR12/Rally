@@ -1,5 +1,5 @@
 from ursina import *
-from particles import Particles
+from Rally.particles import Particles
 
 sign = lambda x: -1 if x < 0 else (1 if x > 0 else 0)
 

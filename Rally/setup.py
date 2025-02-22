@@ -1,28 +1,42 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     # App Information
     name='Rally',  # Changed from 'Voxel Adventure'
     version='1.0.0',  # Your game version
     description='A racing game built with Ursina.',
-    author='Your Name',
-    author_email='youremail@example.com',
+    author='Shivam',
     url='https://github.com/mandaw2014/Rally',  # Optional
 
     # Android Package Information
-    packages=['game'],
+    packages=find_packages(),
     package_data={'game': [
+        '**/*.0',
+        '**/*.1',
+        '**/*.2',
+        '**/*.bat',
+        '**/*.blend',
+        '**/*.csv',
+        '**/*.ico',
+        '**/*.idx',
+        '**/*.jpg',
+        '**/*.json',
+        '**/*.md',
+        '**/*.mp3',
+        '**/*.mtl',
+        '**/*.non_patched',
+        '**/*.obj',
+        '**/*.pack',
+        '**/*.png',
+        '**/*.psd',
         '**/*.py',
-        '**/*.png', 
-        '**/*.jpg', 
-        '**/*.ogg', 
-        '**/*.wav', 
-        '**/*.mp3',  # Added MP3 support
-        '**/*.obj', 
-        '**/*.mtl', 
-        '**/*.ttf',  # Added TrueType fonts
-        '**/*.json',  # Added JSON support
-        '**/*.txt',  # Text files (optional)
+        '**/*.rev',
+        '**/*.sample',
+        '**/*.ttf',
+        '**/*.txt',
+        '**/*.ursinamesh',
+        '**/*.wav',
+        '**/*.whl'
     ]},
 
     # Application ID - This should be unique for your game
@@ -47,8 +61,8 @@ setup(
             'package': 'com.rally.game',  # Changed from 'com.voxeladventure.game'
             'name': 'Rally',  # Changed from 'Voxel Adventure'
             'orientation': 'landscape',
-            'presplash': 'assets/splash.png',  # Optional splash screen
-            'icon': 'assets/icons/rally_icon.png',  # App icon
+            'presplash': 'ursina/textures/ursina_logo.png',  # Using Ursina's default splash screen
+            'icon': 'ursina/textures/ursina.ico',  # Using Ursina's default icon
             'presplash_color': '#000000',  # Optional splash background color
         }
     },

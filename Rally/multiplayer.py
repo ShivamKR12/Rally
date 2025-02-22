@@ -1,6 +1,6 @@
 from ursinanetworking import *
 from ursina import Entity, Vec3, color, destroy
-from car import CarRepresentation, CarUsername
+from Rally.car import CarRepresentation, CarUsername
 
 class Multiplayer(Entity):
     def __init__(self, car):

@@ -1,6 +1,6 @@
 from ursina import *
 from ursina import curve
-from server import Server
+from Rally.server import Server
 import os
 
 Text.default_resolution = 1080 * Text.size

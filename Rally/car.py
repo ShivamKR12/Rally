@@ -1,6 +1,6 @@
 from ursina import *
 from ursina import curve
-from particles import Particles, TrailRenderer
+from Rally.particles import Particles, TrailRenderer
 import json
 
 sign = lambda x: -1 if x < 0 else (1 if x > 0 else 0)
