@@ -1,4 +1,4 @@
-from ursinanetworking import *
+from ursina.networking import *
 
 print("\nHello from the Rally Server!\n")
 
