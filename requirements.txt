@@ -1,0 +1,2 @@
+ursina==8.2.0
+ursinanetworking==2.1.4
