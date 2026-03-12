@@ -52,9 +52,9 @@ setup(
                 'p3openal_audio',
             ],
 
-            "platforms": [
-                "win_amd64",
-            ],
+            # "platforms": [
+            #     "win_amd64",
+            # ],
 
             "icons": {
                 # The key needs to match the key used in gui_apps/console_apps.
