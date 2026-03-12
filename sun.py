@@ -15,9 +15,9 @@ class SunLight(Entity):
         lens.setNearFar(-80, 200)
         lens.setFilmSize((100, 100))
 
-        self.dlnp = render.attachNewNode(self.dlight)
+        self.dlnp = render.attachNewNode(self.dlight) # type: ignore
         self.dlnp.lookAt(direction)
-        render.setLight(self.dlnp)
+        render.setLight(self.dlnp) # type: ignore
 
     def update(self):
         self.dlnp.setPos(self.car.world_position)

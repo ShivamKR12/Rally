@@ -80,11 +80,11 @@ class Car(Entity):
         self.volume = 1
         self.start_sound = True
         self.start_fall = True
-        self.drive_sound = Audio("rally.mp3", loop = True, autoplay = False, volume = 0.5)
-        self.dirt_sound = Audio("dirt-skid.mp3", loop = True, autoplay = False, volume = 0.8)
-        self.skid_sound = Audio("skid.mp3", loop = True, autoplay = False, volume = 0.5)
+        self.drive_sound = Audio("rally.ogg", loop = True, autoplay = False, volume = 0.5)
+        self.dirt_sound = Audio("dirt-skid.ogg", loop = True, autoplay = False, volume = 0.8)
+        self.skid_sound = Audio("skid.ogg", loop = True, autoplay = False, volume = 0.5)
         self.hit_sound = Audio("hit.wav", autoplay = False, volume = 0.5)
-        self.drift_swush = Audio("unlock.mp3", autoplay = False, volume = 0.8)
+        self.drift_swush = Audio("unlock.ogg", autoplay = False, volume = 0.8)
 
         # Collision
         self.copy_normals = False
@@ -233,7 +233,7 @@ class Car(Entity):
         self.car_type = "sports"
         self.model = "sports-car.obj"
         self.texture = "sports-red.png"
-        self.drive_sound.clip = "sports.mp3"
+        self.drive_sound.clip = "sports.ogg"
         self.topspeed = 30
         self.acceleration = 0.38
         self.drift_amount = 5
@@ -251,7 +251,7 @@ class Car(Entity):
         self.car_type = "muscle"
         self.model = "muscle-car.obj"
         self.texture = "muscle-orange.png"
-        self.drive_sound.clip = "muscle.mp3"
+        self.drive_sound.clip = "muscle.ogg"
         self.topspeed = 38
         self.acceleration = 0.32
         self.drift_amount = 6
@@ -269,7 +269,7 @@ class Car(Entity):
         self.car_type = "limo"
         self.model = "limousine.obj"
         self.texture = "limo-black.png"
-        self.drive_sound.clip = "limo.mp3"
+        self.drive_sound.clip = "limo.ogg"
         self.topspeed = 30
         self.acceleration = 0.33
         self.drift_amount = 5.5
@@ -287,7 +287,7 @@ class Car(Entity):
         self.car_type = "lorry"
         self.model = "lorry.obj"
         self.texture = "lorry-white.png"
-        self.drive_sound.clip = "lorry.mp3"
+        self.drive_sound.clip = "lorry.ogg"
         self.topspeed = 30
         self.acceleration = 0.3
         self.drift_amount = 7
@@ -305,7 +305,7 @@ class Car(Entity):
         self.car_type = "hatchback"
         self.model = "hatchback.obj"
         self.texture = "hatchback-green.png"
-        self.drive_sound.clip = "hatchback.mp3"
+        self.drive_sound.clip = "hatchback.ogg"
         self.topspeed = 28
         self.acceleration = 0.43
         self.drift_amount = 6
@@ -323,7 +323,7 @@ class Car(Entity):
         self.car_type = "rally"
         self.model = "rally-car.obj"
         self.texture = "rally-red.png"
-        self.drive_sound.clip = "rally.mp3"
+        self.drive_sound.clip = "rally.ogg"
         self.topspeed = 34
         self.acceleration = 0.46
         self.drift_amount = 4
