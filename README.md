@@ -1,10 +1,26 @@
 # Rally
 
+[![GitHub Release](https://img.shields.io/github/v/release/ShivamKR12/Rally?style=flat-square)](https://github.com/ShivamKR12/Rally/releases/tag/v1.0.2)
+[![Build Status](https://github.com/ShivamKR12/Rally/actions/workflows/build.yml/badge.svg)](https://github.com/ShivamKR12/Rally/actions/runs/23018196079)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
+[![Python Version](https://img.shields.io/badge/python-3.13+-blue?style=flat-square)](https://www.python.org/)
+
 A Simple 3D Racing Game Made In Python With The Ursina Engine
 
 Feel free to leave comments or feedback on how I can improve the game :)
 
 # Installation
+
+**Option 1: Download Pre-built Release**
+
+Download the latest release (v1.0.2) for your platform from [Releases](https://github.com/ShivamKR12/Rally/releases/tag/v1.0.2):
+- Rally-Windows.zip
+- Rally-macOS.zip
+- Rally-Linux.zip
+
+Extract and run the executable.
+
+**Option 2: Build from Source**
 
 Download Rally on itch > https://mandaw2014.itch.io/rally
 
@@ -16,7 +32,9 @@ Code > Download Zip > Extract the Zip > Navigate to the folder in CMD or Termina
 pip install -r requirements.txt
 ```
 
-NOTE: Make sure you have the github version of ursina since some things use the latest features
+Requirements:
+- Python 3.13+
+- Ursina 8.x (github version)
 
 And then run
 
@@ -64,6 +82,8 @@ Tusnad30: Shadows + Lighting
 
 TheAssassin: Achievements + Asset loading + threading
 
+ShivamKR12: Updated to Python 3.13 and Ursina 8.x compatibility
+
 # Screenshots
 
 ![Screenshot 2022-03-27 at 20 53 11](https://user-images.githubusercontent.com/77012627/160865486-3f2768f4-1114-4e30-a67e-8ece0143489b.png)
@@ -77,46 +97,3 @@ TheAssassin: Achievements + Asset loading + threading
 ![Screenshot 2022-05-29 at 20 43 37](https://user-images.githubusercontent.com/77012627/171954952-5722991d-8311-4710-ba92-05adda5278c5.png)
 ![Screenshot 2022-05-29 at 20 45 00](https://user-images.githubusercontent.com/77012627/171954957-e16a9d46-4037-4813-927d-8312bc027570.png)
 ![Screenshot 2022-05-01 at 12 09 19](https://user-images.githubusercontent.com/77012627/171955011-375b7513-2efd-4a1d-8f01-c51899610632.png)
-
-
-
-
-
-Here’s a good **touchscreen-friendly control layout** that maps the PC keys to intuitive on-screen virtual buttons or gestures:
-
----
-
-**🚗 Driving Controls (Touchscreen)**
-
-* **W – Drive** → **Right-side large “Accelerate” button** (thumb-reachable)
-* **S – Brake** → **Left-side large “Brake” button**
-* **A / D – Steer left / right** → **Two small directional buttons on the left** *or* a **virtual steering wheel slider** at the bottom left
-* **SPACE – Hand brake** → **Small circular “Drift” button** near the accelerate button
-* **ESC – Pause menu** → **Small top-right “Pause” icon** (standard mobile menu button)
-* **G – Respawn** → **Small top-center “Reset” button** (maybe with a rotating arrow icon)
-
----
-
-**Possible Layout Example (Landscape orientation):**
-
-```
- ┌───────────────────────────────────────────────┐
- │    [Reset]                       [Pause]      │
- │                                               │
- │                                               │
- │                                               │
- │   ⬅️    ➡️        [Brake]     [Accelerate]   │
- │                [Drift]                        │
- └───────────────────────────────────────────────┘
-```
-
----
-
-**Extra usability tips:**
-
-* Make **Accelerate** and **Brake** bigger than the rest for easy thumb access.
-* Place **Steering** controls far enough apart to avoid accidental pressing.
-* Use **semi-transparent buttons** to avoid blocking the track view.
-* Consider **gesture steering** (tilt device left/right) as an option for smoother control.
-
-If you want, I can also design a **visual mockup** of this control scheme so it’s easier to imagine in-game.
