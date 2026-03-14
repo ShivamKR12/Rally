@@ -13,7 +13,7 @@ Feel free to leave comments or feedback on how I can improve the game :)
 
 **Option 1: Download Pre-built Release**
 
-Download the latest release (v1.0.2) for your platform from [Releases](https://github.com/ShivamKR12/Rally/releases/tag/v1.0.2):
+Download the latest release for your platform from [Releases](https://github.com/ShivamKR12/Rally/releases/latest):
 - Rally-Windows.zip
 - Rally-macOS.zip
 - Rally-Linux.zip
