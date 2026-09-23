@@ -19,6 +19,7 @@ setup(
                 'highscore/**',
                 'tracks/**',
                 'UrsinaAchievements/**',
+                'models_compressed/**',
 
                 '**/*.jpg',
                 '**/*.png',
@@ -27,39 +28,52 @@ setup(
                 '**/*.wav',
                 '**/*.mp3',
                 '**/*.ogg',
+                '**/*.bam',
             ],
 
             # Files to exclude
             'exclude_patterns': [
-                'venv/**',
-                'venv313/**',
+                '.git/**',
+                '.github/**',
+                'build/**',
+                'screenshots/**',
                 'mtl/**',
                 '__pycache__/**',
-                '.github/**',
                 '**/__pycache__/**',
+                'venv/**',
+                'venv313/**',
                 '**/*.pyc',
-                "**/*.mtl",
-                "**/*.md",
+                '**/*.mtl',
+                '**/*.md',
+                'setup.py',
+                'requirements.txt',
+                '.gitignore',
             ],
 
             'include_modules': {
                 '*': ['ursina']
             },
 
-            # Include the OpenGL renderer and OpenAL audio plug-in
+            # Include the OpenGL renderer and OpenAL audio plug-in, and ffmpeg for mp3
             'plugins': [
                 'pandagl',
                 'p3openal_audio',
+                'p3ffmpeg',
             ],
 
-            # "platforms": [
-            #     "win_amd64",
-            # ],
+            'platforms': [
+                'manylinux2014_x86_64',
+                'macosx_10_13_x86_64',
+                'win_amd64',
+            ],
 
-            "icons": {
+            'prefer_discrete_gpu': True,
+            'strip_docstrings': True,
+
+            'icons': {
                 # The key needs to match the key used in gui_apps/console_apps.
                 # Alternatively, use "*" to set the icon for all apps.
-                "Rally": ["panda3d-logo.png"],
+                'Rally': ['panda3d-logo.png'],
             },
         }
     }
