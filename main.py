@@ -45,19 +45,19 @@ else:
 def load_assets():
     models_to_load = [
         # Cars
-        "sports-car.obj", "muscle-car.obj", "limousine.obj", "lorry.obj", "hatchback.obj", "rally-car.obj",
+        "sports-car", "muscle-car", "limousine", "lorry", "hatchback", "rally-car",
         # Tracks
-        "sand_track.obj", "grass_track.obj", "snow_track.obj",
-        "forest_track.obj", "savannah_track.obj", "lake_track.obj", "particles.obj",
+        "sand_track", "grass_track", "snow_track",
+        "forest_track", "savannah_track", "lake_track", "particles",
         # Track Bounds
-        "sand_track_bounds.obj", "grass_track_bounds.obj", "snow_track_bounds.obj", 
-        "forest_track_bounds.obj", "savannah_track_bounds.obj", "lake_track_bounds.obj",
+        "sand_track_bounds", "grass_track_bounds", "snow_track_bounds", 
+        "forest_track_bounds", "savannah_track_bounds", "lake_track_bounds",
         # Track Details
-        "rocks-sand.obj", "cacti-sand.obj", "trees-grass.obj", "thintrees-grass.obj", "rocks-grass.obj", "grass-grass_track.obj", "trees-snow.obj", 
-        "thintrees-snow.obj", "rocks-snow.obj", "trees-forest.obj", "thintrees-forest.obj", "rocks-savannah.obj", "trees-savannah.obj",
-        "trees-lake.obj", "thintrees-lake.obj", "rocks-lake.obj", "bigrocks-lake.obj", "grass-lake.obj", "lake_bounds.obj",
+        "rocks-sand", "cacti-sand", "trees-grass", "thintrees-grass", "rocks-grass", "grass-grass_track", "trees-snow", 
+        "thintrees-snow", "rocks-snow", "trees-forest", "thintrees-forest", "rocks-savannah", "trees-savannah",
+        "trees-lake", "thintrees-lake", "rocks-lake", "bigrocks-lake", "grass-lake", "lake_bounds",
         # Cosmetics
-        "viking_helmet.obj", "duck.obj", "banana.obj", "surfinbird.obj", "surfboard.obj"
+        "viking_helmet", "duck", "banana", "surfinbird", "surfboard"
     ]
 
     textures_to_load = [

@@ -3,7 +3,7 @@ from ursina import *
 class SnowTrack(Entity):
     def __init__(self, car):
         super().__init__(
-            model = "snow_track.obj",
+            model = "snow_track",
             texture = "snow_track.png",
             position = (0, -50, 0),
             rotation = (0, 90, 0),
@@ -14,7 +14,7 @@ class SnowTrack(Entity):
         self.car = car
 
         self.finish_line = Entity(model = "cube", position = (11, -42, 90), rotation = (0, 0, 0), scale = (3, 8, 30), visible = False)
-        self.boundaries = Entity(model = "snow_track_bounds.obj", collider = "mesh", rotation = (0, 90, 0), position = (0, -50, 0), scale = (8, 8, 8), visible = False)
+        self.boundaries = Entity(model = "snow_track_bounds", collider = "mesh", rotation = (0, 90, 0), position = (0, -50, 0), scale = (8, 8, 8), visible = False)
 
         self.wall1 = Entity(model = "cube", position = (-10, -42, 38), rotation = (0, 0, 0), collider = "box", scale = (5, 30, 50), visible = False)
         self.wall2 = Entity(model = "cube", position = (-36, -42, 38), rotation = (0, 0, 0), collider = "box", scale = (5, 30, 50), visible = False)
@@ -32,9 +32,9 @@ class SnowTrack(Entity):
         self.wall_trigger = Entity(model = "cube", position = (29, -40.2, -51), rotation = (0, 0, 0), scale = (3, 20, 35), visible = False)
         self.wall_trigger_end = Entity(model = "cube", position = (-70, -40.2, 100), rotation = (0, 0, 0), scale = (35, 20, 3), visible = False)
 
-        self.trees = Entity(model = "trees-snow.obj", texture = "tree-snow.png", y = -50, rotation_y = 90, scale = 8)
-        self.thin_trees = Entity(model = "thintrees-snow.obj", texture = "thintree-snow.png", y = -50, rotation_y = 90, scale = 8)
-        self.rocks = Entity(model = "rocks-snow.obj", texture = "rock-snow.png", y = -50, rotation_y = 90, scale = 8)
+        self.trees = Entity(model = "trees-snow", texture = "tree-snow.png", y = -50, rotation_y = 90, scale = 8)
+        self.thin_trees = Entity(model = "thintrees-snow", texture = "thintree-snow.png", y = -50, rotation_y = 90, scale = 8)
+        self.rocks = Entity(model = "rocks-snow", texture = "rock-snow.png", y = -50, rotation_y = 90, scale = 8)
 
         self.disable()
         

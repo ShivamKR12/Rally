@@ -4,7 +4,7 @@ from ursina import curve
 class Particles(Entity):
     def __init__(self, car, position):
         super().__init__(
-            model = "particles.obj",
+            model = "particles",
             scale = 0.1,
             position = position, 
             rotation_y = random.random() * 360
@@ -80,7 +80,7 @@ class TrailRenderer(Entity):
 # class Smoke(Entity):
 #     def __init__(self, position, rotation_y, amount_of_smoke):
 #         super().__init__(
-#             model = "smoke.obj",
+#             model = "smoke",
 #             texture = "smoke.png", 
 #             scale = 3,
 #             position = position,

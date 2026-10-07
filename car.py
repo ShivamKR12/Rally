@@ -9,7 +9,7 @@ Text.default_resolution = 1080 * Text.size
 class Car(Entity):
     def __init__(self, position = (0, 0, 4), rotation = (0, 0, 0), topspeed = 30, acceleration = 0.35, braking_strength = 30, friction = 0.6, camera_speed = 8, drift_speed = 35):
         super().__init__(
-            model = "sports-car.obj",
+            model = "sports-car",
             texture = "sports-red.png",
             collider = "box",
             position = position,
@@ -100,11 +100,11 @@ class Car(Entity):
 
         # Cosmetics
         self.current_cosmetic = "none"
-        self.viking_helmet = Entity(model = "viking_helmet.obj", texture = "viking_helmet.png", parent = self)
-        self.duck = Entity(model = "duck.obj", parent = self)
-        self.banana = Entity(model = "banana.obj", parent = self)
-        self.surfinbird = Entity(model = "surfinbird.obj", texture = "surfinbird.png", parent = self)
-        self.surfboard = Entity(model = "surfboard.obj", texture = "surfboard.png", parent = self.surfinbird)
+        self.viking_helmet = Entity(model = "viking_helmet", texture = "viking_helmet.png", parent = self)
+        self.duck = Entity(model = "duck", parent = self)
+        self.banana = Entity(model = "banana", parent = self)
+        self.surfinbird = Entity(model = "surfinbird", texture = "surfinbird.png", parent = self)
+        self.surfboard = Entity(model = "surfboard", texture = "surfboard.png", parent = self.surfinbird)
         self.cosmetics = [self.viking_helmet, self.duck, self.banana, self.surfinbird]
         self.viking_helmet.disable()
         self.duck.disable()
@@ -224,14 +224,14 @@ class Car(Entity):
         self.beat_mandaw_savannah_track = False
         self.beat_mandaw_lake_track = False
 
-        self.model_path = str(self.model).split("/")[-1]
+        self.model_path = str(self.model).split("/")[-1].split(".")[0]
 
         invoke(self.set_unlocked, delay = 1)
         invoke(self.update_model_path, delay = 3)
 
     def sports_car(self):
         self.car_type = "sports"
-        self.model = "sports-car.obj"
+        self.model = "sports-car"
         self.texture = "sports-red.png"
         self.drive_sound.clip = "sports.ogg"
         self.topspeed = 30
@@ -249,7 +249,7 @@ class Car(Entity):
 
     def muscle_car(self):
         self.car_type = "muscle"
-        self.model = "muscle-car.obj"
+        self.model = "muscle-car"
         self.texture = "muscle-orange.png"
         self.drive_sound.clip = "muscle.ogg"
         self.topspeed = 38
@@ -267,7 +267,7 @@ class Car(Entity):
 
     def limo(self):
         self.car_type = "limo"
-        self.model = "limousine.obj"
+        self.model = "limousine"
         self.texture = "limo-black.png"
         self.drive_sound.clip = "limo.ogg"
         self.topspeed = 30
@@ -285,7 +285,7 @@ class Car(Entity):
 
     def lorry(self):
         self.car_type = "lorry"
-        self.model = "lorry.obj"
+        self.model = "lorry"
         self.texture = "lorry-white.png"
         self.drive_sound.clip = "lorry.ogg"
         self.topspeed = 30
@@ -303,7 +303,7 @@ class Car(Entity):
 
     def hatchback(self):
         self.car_type = "hatchback"
-        self.model = "hatchback.obj"
+        self.model = "hatchback"
         self.texture = "hatchback-green.png"
         self.drive_sound.clip = "hatchback.ogg"
         self.topspeed = 28
@@ -321,7 +321,7 @@ class Car(Entity):
 
     def rally_car(self):
         self.car_type = "rally"
-        self.model = "rally-car.obj"
+        self.model = "rally-car"
         self.texture = "rally-red.png"
         self.drive_sound.clip = "rally.ogg"
         self.topspeed = 34
@@ -1218,7 +1218,7 @@ class Car(Entity):
         """
         Updates the model's file path for multiplayer
         """
-        self.model_path = str(self.model).split("/")[-1]
+        self.model_path = str(self.model).split("/")[-1].split(".")[0]
         invoke(self.update_model_path, delay = 3)
 
 # Class for copying the car's position, rotation for multiplayer
@@ -1226,20 +1226,20 @@ class CarRepresentation(Entity):
     def __init__(self, car, position = (0, 0, 0), rotation = (0, 65, 0)):
         super().__init__(
             parent = scene,
-            model = "sports-car.obj",
+            model = "sports-car",
             texture = "sports-red.png",
             position = position,
             rotation = rotation,
             scale = (1, 1, 1)
         )
 
-        self.model_path = str(self.model).split("/")[-1]
+        self.model_path = str(self.model).split("/")[-1].split(".")[0]
         
-        self.viking_helmet = Entity(model = "viking_helmet.obj", texture = "viking_helmet.png", parent = self)
-        self.duck = Entity(model = "duck.obj", parent = self)
-        self.banana = Entity(model = "banana.obj", parent = self)
-        self.surfinbird = Entity(model = "surfinbird.obj", texture = "surfinbird.png", parent = self)
-        self.surfboard = Entity(model = "surfboard.obj", texture = "surfboard.png", parent = self.surfinbird)
+        self.viking_helmet = Entity(model = "viking_helmet", texture = "viking_helmet.png", parent = self)
+        self.duck = Entity(model = "duck", parent = self)
+        self.banana = Entity(model = "banana", parent = self)
+        self.surfinbird = Entity(model = "surfinbird", texture = "surfinbird.png", parent = self)
+        self.surfboard = Entity(model = "surfboard", texture = "surfboard.png", parent = self.surfinbird)
         self.viking_helmet.disable()
         self.duck.disable()
         self.banana.disable()
@@ -1255,11 +1255,11 @@ class CarRepresentation(Entity):
     def update_representation(self):
         for cosmetic in self.cosmetics:
             if cosmetic.enabled:
-                if self.model_path == "lorry.obj":
+                if self.model_path == "lorry":
                     cosmetic.y = 1.5
-                elif self.model_path == "limo.obj":
+                elif self.model_path == "limo":
                     cosmetic.y = 0.1
-                elif self.model_path == "sports-car.obj" or self.model_path == "muscle-car.obj":
+                elif self.model_path == "sports-car" or self.model_path == "muscle-car":
                     cosmetic.y = 0
 
         invoke(self.update_representation, delay = 5)

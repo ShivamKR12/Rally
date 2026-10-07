@@ -3,7 +3,7 @@ from ursina import *
 class GrassTrack(Entity):
     def __init__(self, car):
         super().__init__(
-            model = "grass_track.obj", 
+            model = "grass_track", 
             texture = "grass_track.png", 
             position = (0, -50, 0), 
             rotation = (0, 270, 0), 
@@ -14,7 +14,7 @@ class GrassTrack(Entity):
         self.car = car
 
         self.finish_line = Entity(model = "cube", position = (-62, -40, 15), rotation = (0, 0, 0), scale = (3, 8, 30), visible = False)
-        self.boundaries = Entity(model = "grass_track_bounds.obj", collider = "mesh", position = (0, -50, 0), rotation = (0, 270, 0), scale = (25, 25, 25), visible = False)
+        self.boundaries = Entity(model = "grass_track_bounds", collider = "mesh", position = (0, -50, 0), rotation = (0, 270, 0), scale = (25, 25, 25), visible = False)
 
         self.wall1 = Entity(model = "cube", position = (-5, -40, 35), rotation = (0, 90, 0), collider = "box", scale = (5, 30, 50), visible = False)
         self.wall2 = Entity(model = "cube", position = (20, -40, 1), rotation = (0, 90, 0), collider = "box", scale = (5, 30, 150), visible = False)
@@ -24,10 +24,10 @@ class GrassTrack(Entity):
         self.wall_trigger = Entity(model = "cube", position = (25, -40.2, 65), rotation = (0, 0, 0), scale = (3, 20, 50), visible = False)
         self.wall_trigger_ramp = Entity(model = "cube", position = (-82, -34, -64), rotation = (0, 0, 0), scale = (3, 20, 50), visible = False)
         
-        self.trees = Entity(model = "trees-grass.obj", texture = "tree-grass.png", position = (0, -50, 0), rotation_y = 270, scale = 25)
-        self.rocks = Entity(model = "rocks-grass.obj", texture = "rock-grass.png", position = (0, -50, 0), rotation_y = 270, scale = 25)
-        self.grass = Entity(model = "grass-grass_track.obj", texture = "grass-grass_track.png", position = (0, -50, 0), rotation_y = 270, scale = 25)
-        self.thin_trees = Entity(model = "thintrees-grass.obj", texture = "thintree-grass.png", position = (0, -50, 0), rotation_y = 270, scale = 25)
+        self.trees = Entity(model = "trees-grass", texture = "tree-grass.png", position = (0, -50, 0), rotation_y = 270, scale = 25)
+        self.rocks = Entity(model = "rocks-grass", texture = "rock-grass.png", position = (0, -50, 0), rotation_y = 270, scale = 25)
+        self.grass = Entity(model = "grass-grass_track", texture = "grass-grass_track.png", position = (0, -50, 0), rotation_y = 270, scale = 25)
+        self.thin_trees = Entity(model = "thintrees-grass", texture = "thintree-grass.png", position = (0, -50, 0), rotation_y = 270, scale = 25)
 
         self.track = [
             self.finish_line, self.boundaries, self.wall1, self.wall2, self.wall3, 

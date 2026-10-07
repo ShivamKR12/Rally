@@ -3,7 +3,7 @@ from ursina import *
 class LakeTrack(Entity):
     def __init__(self, car):
         super().__init__(
-            model = "lake_track.obj", 
+            model = "lake_track", 
             texture = "lake_track.png", 
             position = (0, -50, 0), 
             rotation = (0, 90, 0), 
@@ -14,15 +14,15 @@ class LakeTrack(Entity):
         self.car = car
 
         self.finish_line = Entity(model = "cube", position = (-96, -50, 157), scale = (3, 8, 30), visible = False)
-        self.boundaries = Entity(model = "lake_track_bounds.obj", collider = "mesh", y = -50, rotation_y = 90, scale = 14, visible = False)
+        self.boundaries = Entity(model = "lake_track_bounds", collider = "mesh", y = -50, rotation_y = 90, scale = 14, visible = False)
         self.lake_bounds = Entity(model = "cube", y = -59, scale = (1000, 10, 1000), visible = False)
         self.wall_trigger = Entity(model = "cube", position = (143, -30, -145), scale = (3, 10, 30), visible = False)
 
-        self.trees = Entity(model = "trees-lake.obj", texture = "tree-lake.png", y = -50, rotation_y = 90, scale = 14)
-        self.thin_trees = Entity(model = "thintrees-lake.obj", texture = "thintree-lake.png", y = -50, rotation_y = 90, scale = 14)
-        self.rocks = Entity(model = "rocks-lake.obj", texture = "rock-lake.png", y = -50, rotation_y = 90, scale = 14)
-        self.bigrocks = Entity(model = "bigrocks-lake.obj", texture = "rock-lake.png", y = -50, rotation_y = 90, scale = 14)
-        self.grass = Entity(model = "grass-lake.obj", texture = "grass-lake.png", y = -50, rotation_y = 90, scale = 14)
+        self.trees = Entity(model = "trees-lake", texture = "tree-lake.png", y = -50, rotation_y = 90, scale = 14)
+        self.thin_trees = Entity(model = "thintrees-lake", texture = "thintree-lake.png", y = -50, rotation_y = 90, scale = 14)
+        self.rocks = Entity(model = "rocks-lake", texture = "rock-lake.png", y = -50, rotation_y = 90, scale = 14)
+        self.bigrocks = Entity(model = "bigrocks-lake", texture = "rock-lake.png", y = -50, rotation_y = 90, scale = 14)
+        self.grass = Entity(model = "grass-lake", texture = "grass-lake.png", y = -50, rotation_y = 90, scale = 14)
 
         self.track = [
             self.finish_line, self.boundaries, self.lake_bounds, self.wall_trigger

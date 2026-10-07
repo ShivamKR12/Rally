@@ -37,8 +37,8 @@ class Multiplayer(Entity):
                 if variable_type == "player":
                     self.players_target_pos[variable_name] = Vec3(-80, -30, 15)
                     self.players_target_rot[variable_name] = Vec3(0, 90, 0)
-                    self.players_target_model[variable_name] = "./assets/cars/sports-car.obj"
-                    self.players_target_tex[variable_name] = "./assets/cars/garage/sports-car/sports-red.png"
+                    self.players_target_model[variable_name] = "sports-car"
+                    self.players_target_tex[variable_name] = "sports-red.png"
                     self.players_target_name[variable_name] = "Guest"
                     self.players_target_score[variable_name] = 0.0
                     self.players_target_cos[variable_name] = "none"

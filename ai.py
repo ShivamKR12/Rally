@@ -6,7 +6,7 @@ sign = lambda x: -1 if x < 0 else (1 if x > 0 else 0)
 class AICar(Entity):
     def __init__(self, car, ai_list, sand_track, grass_track, snow_track, forest_track, savannah_track, lake_track):
         super().__init__(
-            model = "sports-car.obj",
+            model = "sports-car",
             texture = "sports-red.png",
             collider = "box",
             position = (0, 0, 0),
@@ -179,32 +179,32 @@ class AICar(Entity):
         self.disable()
 
     def sports_car(self):
-        self.model = "sports-car.obj"
+        self.model = "sports-car"
         self.texture = "sports-red.png"
         self.car_type = "sports"
     
     def muscle_car(self):
-        self.model = "muscle-car.obj"
+        self.model = "muscle-car"
         self.texture = "muscle-orange.png"
         self.car_type = "muscle"
 
     def limo(self):
-        self.model = "limousine.obj"
+        self.model = "limousine"
         self.texture = "limo-black.png"
         self.car_type = "limo"
 
     def lorry(self):
-        self.model = "lorry.obj"
+        self.model = "lorry"
         self.texture = "lorry-white.png"
         self.car_type = "lorry"
 
     def hatchback(self):
-        self.model = "hatchback.obj"
+        self.model = "hatchback"
         self.texture = "hatchback-green.png"
         self.car_type = "hatchback"
 
     def rally_car(self):
-        self.model = "rally-car.obj"
+        self.model = "rally-car"
         self.texture = "rally-red.png"
         self.car_type = "rally"
 

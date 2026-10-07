@@ -18,7 +18,7 @@ class Server:
             def onClientConnected(client):
                 self.easy.create_replicated_variable(
                     f"player_{client.id}",
-                    { "type" : "player", "id" : client.id, "username": "Guest", "position": (0, 0, 0), "rotation" : (0, 0, 0), "model" : "sports-car.obj", "texture" : "sports-red.png", "highscore": 0.0, "cosmetic": "none"}
+                    { "type" : "player", "id" : client.id, "username": "Guest", "position": (0, 0, 0), "rotation" : (0, 0, 0), "model" : "sports-car", "texture" : "sports-red.png", "highscore": 0.0, "cosmetic": "none"}
                 )
                 print(f"{client} connected!")
                 client.send_message("GetId", client.id)
