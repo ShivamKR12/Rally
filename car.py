@@ -224,7 +224,7 @@ class Car(Entity):
         self.beat_mandaw_savannah_track = False
         self.beat_mandaw_lake_track = False
 
-        self.model_path = str(self.model).replace("render/scene/car/", "")
+        self.model_path = str(self.model).split("/")[-1]
 
         invoke(self.set_unlocked, delay = 1)
         invoke(self.update_model_path, delay = 3)
@@ -1218,7 +1218,7 @@ class Car(Entity):
         """
         Updates the model's file path for multiplayer
         """
-        self.model_path = str(self.model).replace("render/scene/car/", "")
+        self.model_path = str(self.model).split("/")[-1]
         invoke(self.update_model_path, delay = 3)
 
 # Class for copying the car's position, rotation for multiplayer
@@ -1233,7 +1233,7 @@ class CarRepresentation(Entity):
             scale = (1, 1, 1)
         )
 
-        self.model_path = str(self.model).replace("render/scene/car_representation/", "")
+        self.model_path = str(self.model).split("/")[-1]
         
         self.viking_helmet = Entity(model = "viking_helmet.obj", texture = "viking_helmet.png", parent = self)
         self.duck = Entity(model = "duck.obj", parent = self)

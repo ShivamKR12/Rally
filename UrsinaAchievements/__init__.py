@@ -48,9 +48,9 @@ class Achievement(Entity):
 	"""
 	# The different ringtones
 	ringtones = {
-		"clicking": Audio(f"{_path}/ringtones/clicking.ogg", autoplay=False),
-		"subtle": Audio(f"{_path}/ringtones/subtle.ogg", autoplay=False),
-		"uplifting": Audio(f"{_path}/ringtones/uplifting.ogg", autoplay=False)
+		"clicking": Audio(f"{_path}/ringtones/clicking.ogg", autoplay=False) if os.path.exists(f"{_path}/ringtones/clicking.ogg") else None,
+		"subtle": Audio(f"{_path}/ringtones/subtle.ogg", autoplay=False) if os.path.exists(f"{_path}/ringtones/subtle.ogg") else None,
+		"uplifting": Audio(f"{_path}/ringtones/uplifting.ogg", autoplay=False) if os.path.exists(f"{_path}/ringtones/uplifting.ogg") else None
 	}
 	achievement_color = (64, 64, 64)
 	text_color = (255, 255, 255)
@@ -99,7 +99,8 @@ class Achievement(Entity):
 		if ringtone is not None:
 			# Plays the ringtone if the name is in the class dictionnary
 			if ringtone in Achievement.ringtones.keys():
-				Achievement.ringtones[ringtone].play()
+				if Achievement.ringtones[ringtone] is not None:
+					Achievement.ringtones[ringtone].play()
 			# Or locates and plays the audio file if wanted
 			else:
 				Audio(ringtone)
