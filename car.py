@@ -718,7 +718,7 @@ class Car(Entity):
                 # Check if hitting a wall or steep slope
                 if y_ray.world_normal.y > 0.7 and y_ray.world_point.y - self.world_y < 0.5:
                     # Set the y value to the ground's y value
-                    self.y = y_ray.world_point.y + 1.4
+                    self.y = y_ray.world_point.y + 1.2
                     self.hitting_wall = False
                 else:
                     # Car is hitting a wall

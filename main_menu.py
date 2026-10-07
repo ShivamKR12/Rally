@@ -250,8 +250,28 @@ class MainMenu(Entity):
                 self.grass_track.grass.disable()
 
         def stop_server():
-            application.quit()
-            os._exit(0)
+            self.created_server_menu.disable()
+            self.start_menu.enable()
+            self.car.server_running = False
+            self.car.multiplayer = False
+            self.car.position = (-80, -42, 18.8)
+            self.car.visible = True
+            self.sand_track.disable()
+            self.grass_track.enable()
+            for track in self.tracks:
+                for i in track.track:
+                    i.disable()
+                for i in track.details:
+                    i.disable()
+            for track in self.grass_track.track:
+                track.enable()
+            if self.car.graphics != "ultra fast":
+                for detail in self.grass_track.details:
+                    detail.enable()
+            if self.car.graphics == "fast":
+                self.grass_track.grass.disable()
+            
+            # Note: We can't easily kill the UrsinaNetworkingServer thread, but we stop updating it.
 
         self.username_created_server = InputField(default_value = car.username_text, color = color.black, alpha = 100, y = 0.05, parent = self.created_server_menu)
         join_hosted_server = Button(text = "Join Server", color = color.hex("F58300"), highlight_color = color.gray, scale_y = 0.1, scale_x = 0.3, y = -0.1, parent = self.created_server_menu)
