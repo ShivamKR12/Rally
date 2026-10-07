@@ -188,7 +188,7 @@ def update():
 
 def input(key):
     # If multiplayer, send the client's position, rotation, texture, username and highscore to the server
-    if car.multiplayer_update:
+    if car.multiplayer_update and multiplayer.client.connected:
         multiplayer.client.send_message("MyPosition", tuple(car.position))
         multiplayer.client.send_message("MyRotation", tuple(car.rotation))
         multiplayer.client.send_message("MyTexture", str(car.texture))
