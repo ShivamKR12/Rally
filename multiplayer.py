@@ -3,7 +3,8 @@ from ursina import Entity, Vec3, color, destroy
 from car import CarRepresentation, CarUsername
 
 class Multiplayer(Entity):
-    def __init__(self, car):
+    def __init__(self, car, **kwargs):
+        super().__init__(**kwargs)
         self.car = car
 
         # If the input filed doesn't equal IP and PORT (the defaults) create Client
