@@ -97,6 +97,9 @@ def load_assets():
     for i, t in enumerate(textures_to_load):
         load_texture(t)
 
+import os
+os.makedirs("models_compressed", exist_ok=True)
+
 try:
     thread.start_new_thread(function = load_assets, args = "")
 except Exception as e:
@@ -183,10 +186,6 @@ def update():
         if car.server.server_update:
             car.server.easy.process_net_events()
     
-    if achievements.time_spent < 10:
-        achievements.time_spent += time.dt
-
-def input(key):
     # If multiplayer, send the client's position, rotation, texture, username and highscore to the server
     if car.multiplayer_update and multiplayer.client.connected:
         multiplayer.client.send_message("MyPosition", tuple(car.position))
@@ -196,5 +195,9 @@ def input(key):
         multiplayer.client.send_message("MyHighscore", str(round(car.highscore_count, 2)))
         multiplayer.client.send_message("MyCosmetic", str(car.current_cosmetic))
         multiplayer.client.send_message("MyModel", str(car.model_path))
+    
+    if achievements.time_spent < 10:
+        achievements.time_spent += time.dt
+
 
 app.run()
